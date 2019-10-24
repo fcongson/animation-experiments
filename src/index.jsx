@@ -8,6 +8,9 @@ injectGlobal`
     box-sizing: border-box;
   }
   @import url('https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap');
+  body {
+    background: #394E6F;
+  }
 `
 
 const App = () => <Typography />

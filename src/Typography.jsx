@@ -2,12 +2,15 @@
 import * as React from 'react'
 import { css, jsx } from '@emotion/core'
 
+const photography = require('./assets/photography.svg')
+
 const styles = css`
   font-family: Montserrat;
   font-style: normal;
   font-weight: 900;
-  font-size: 81px;
-  line-height: 99px;
+  font-size: 121.5px;
+  line-height: 148px;
+  color: #ffffff;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -17,7 +20,7 @@ const styles = css`
 
 const Typography = () => (
   <div css={styles}>
-    <h1>PHOTOGRAPHY.</h1>
+    <img src={photography} />
   </div>
 )
 
