@@ -1,8 +1,8 @@
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+import styled from "@emotion/styled";
 import { motion } from "framer-motion";
+import React from "react";
 
-const styles = css`
+const StyledDiv = styled.div`
   font-family: Montserrat;
   font-style: normal;
   font-weight: 900;
@@ -14,73 +14,6 @@ const styles = css`
   justify-content: center;
   align-items: center;
   text-align: center;
-
-  /* path:nth-of-type(1) {
-    stroke-dasharray: 377.1180725097656px;
-    stroke-dashoffset: 377.1180725097656px;
-    animation: typogaphy-animation 2s ease forwards;
-  }
-  path:nth-of-type(2) {
-    stroke-dasharray: 460.7288818359375px;
-    stroke-dashoffset: 460.7288818359375px;
-    animation: typogaphy-animation 2s ease forwards 0.3s;
-  }
-  path:nth-of-type(3) {
-    stroke-dasharray: 420.9867858886719px;
-    stroke-dashoffset: 420.9867858886719px;
-    animation: typogaphy-animation 2s ease forwards 0.6s;
-  }
-  path:nth-of-type(4) {
-    stroke-dasharray: 327.0780029296875px;
-    stroke-dashoffset: 327.0780029296875px;
-    animation: typogaphy-animation 2s ease forwards 0.9s;
-  }
-  path:nth-of-type(5) {
-    stroke-dasharray: 420.98760986328125px;
-    stroke-dashoffset: 420.98760986328125px;
-    animation: typogaphy-animation 2s ease forwards 1.2s;
-  }
-  path:nth-of-type(6) {
-    stroke-dasharray: 435.4600830078125px;
-    stroke-dashoffset: 435.4600830078125px;
-    animation: typogaphy-animation 2s ease forwards 1.5s;
-  }
-  path:nth-of-type(7) {
-    stroke-dasharray: 437.5019226074219px;
-    stroke-dashoffset: 437.5019226074219px;
-    animation: typogaphy-animation 2s ease forwards 1.8s;
-  }
-  path:nth-of-type(8) {
-    stroke-dasharray: 399.0985107421875px;
-    stroke-dashoffset: 399.0985107421875px;
-    animation: typogaphy-animation 2s ease forwards 2.1s;
-  }
-  path:nth-of-type(9) {
-    stroke-dasharray: 377.11883544921875px;
-    stroke-dashoffset: 377.11883544921875px;
-    animation: typogaphy-animation 2s ease forwards 2.4s;
-  }
-  path:nth-of-type(10) {
-    stroke-dasharray: 460.7281188964844px;
-    stroke-dashoffset: 460.7281188964844px;
-    animation: typogaphy-animation 2s ease forwards 2.7s;
-  }
-  path:nth-of-type(11) {
-    stroke-dasharray: 342.7149353027344px;
-    stroke-dashoffset: 342.7149353027344px;
-    animation: typogaphy-animation 2s ease forwards 3s;
-  }
-  path:nth-of-type(12) {
-    stroke-dasharray: 100.60675048828125px;
-    stroke-dashoffset: 100.60675048828125px;
-    animation: typogaphy-animation 2s ease forwards 3.3s;
-  }
-
-  @keyframes typogaphy-animation {
-    to {
-      stroke-dashoffset: 0;
-    }
-  } */
 `;
 
 const path = {
@@ -93,7 +26,7 @@ const path = {
 };
 
 const Typography = () => (
-  <div css={styles}>
+  <StyledDiv>
     <svg
       id="photography"
       width="1056"
@@ -140,7 +73,7 @@ const Typography = () => (
         variants={path}
         initial="hidden"
         animate="visible"
-        transition={{ duration: 2 }}
+        transition={{ duration: 2, delay: 0.0 }}
       />
       <motion.path
         d="M177.01 5.94998V91H148.336V59.653H121.849V91H93.1746V5.94998H121.849V36.082H148.336V5.94998H177.01Z"
@@ -264,7 +197,7 @@ const Typography = () => (
         transition={{ duration: 2, delay: 3.3 }}
       />
     </svg>
-  </div>
+  </StyledDiv>
 );
 
 export default Typography;
